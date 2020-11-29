@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions 2</title>
+</head>
+<body>
+    <script>
+
+        // cylinder
+
+        var cylinder = {
+            radius: 5,
+            height: 8
+        }
+
+        function getVolume() {
+            var volume = Math.PI * (cylinder.radius ** 2) * cylinder.height;
+            return volume;
+        }
+
+        function getArea() {
+            var area = 2 * Math.PI * cylinder.radius * (cylinder.radius + cylinder.height);
+            return area;
+        }
+        
+        console.log(getVolume());
+        console.log(getArea());
+
+        // getResult
+
+        function getResult(num1, num2, sign) {
+            var result;
+
+            if (sign === '+') {
+                result = num1 + num2;
+            } else if (sign === '-') {
+                result = num1 - num2;
+            } else if (sign === '/') {
+                result = num1 / num2;
+            } else if (sign === '*') {
+                result = num1 * num2;
+            } else if (sign === '%') {
+                result = num1 % num2;
+            } else if (sign === '**') {
+                result = num1 ** num2;
+            } else {
+                result = 'incorrect sign';
+            } 
+            
+            return result;
+        }
+
+        console.log(getResult(45, 18, '%'));
+
+        //  isCharPresent
+
+        function isCharPresent(string, symbol) {
+            var result;
+
+            for (let i = 0; i < string.length; i++) {
+                if (symbol === string[i]) {
+                result = true
+                break;
+                } else {
+                result = false
+                }
+            }
+            return result;
+        }
+
+        console.log(isCharPresent('Все смешалось в доме Облонских', 'ш'));
+
+        // charIndexOf
+
+        function charIndexOf(string, symbol) {
+            var result;
+
+            for (let i = 0; i < string.length; i++) {
+                if (symbol === string[i]) {
+                result = i;
+                break;
+                } else {
+                result = -1;
+                }
+            }
+            return result;
+        }
+
+        console.log(charIndexOf('Все смешалось в доме Облонских', 'ш'));
+
+    </script>
+</body>
+</html>
